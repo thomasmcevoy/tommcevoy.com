@@ -1,45 +1,42 @@
 <script>
-  import calendar from "../assets/calendar.js";
-
-  const needsUnderlineFix = calendar.shows.length % 3 === 1;
+  import calendars from "../assets/calendar.js";
 </script>
 
 <section id="shows">
   <h2>SHOWS</h2>
   <div id="calendar">
-    <h4>{calendar.month} {calendar.year}</h4>
-    <div class="container" class:has-orphan={needsUnderlineFix}>
-      <ol>
-        {#each calendar.shows as show, i}
-          <li
-            class="show"
-            class:underline-fix={
-              needsUnderlineFix &&
-              (i === calendar.shows.length - 3 ||
-              i === calendar.shows.length - 2)
-            }
-          >
-            <div class="day">
-              {show.day}
-            </div>
-            <div class="details">
-              {#if !show.url}
-                <div class="venue">
-                  {show.venue.toUpperCase()}
-                </div>
-              {:else}
-                <a href={show.url} class="venue">
-                  {show.venue.toUpperCase()}
-                </a>
-              {/if}
-              <div>{show.band.toUpperCase()}</div>
-              <div>{show.time.toUpperCase()}</div>
-            </div>
-          </li>
-        {/each}
-      </ol>
-    </div>
+  {#each calendars as calendar}
+  <div class="calendar-month">
+  <h4>{calendar.month} {calendar.year}</h4>
+
+  <div
+    class="container"
+    class:has-orphan={calendar.shows.length % 3 !== 0}
+  >
+    <ol>
+      {#each calendar.shows as show}
+        <li class="show">
+          <div class="day">{show.day}</div>
+
+          <div class="details">
+            {#if !show.url}
+              <div class="venue">{show.venue.toUpperCase()}</div>
+            {:else}
+              <a href={show.url} class="venue">
+                {show.venue.toUpperCase()}
+              </a>
+            {/if}
+
+            <div>{show.band.toUpperCase()}</div>
+            <div>{show.time.toUpperCase()}</div>
+          </div>
+        </li>
+      {/each}
+    </ol>
   </div>
+  </div>
+{/each}
+</div>
 </section>
 
 <style>
@@ -122,43 +119,68 @@
       padding: 2em 0.5em;
     }
   }
-  @media (min-width: 600px) {
-    .show.underline-fix {
-      position: relative;
-    }
 
-    .show.underline-fix::after {
-      content: "";
-      position: absolute;
-      bottom: -0.14em;
-      left: 0;
-      width: 100%;
-      height: 0.14em;
-      background-color: #d6a929;
-    }
-  }
+
+.calendar-month {
+  margin-bottom: 6vw;
+}
+  
   
 
-  .container.has-orphan {
+
+/****** UNDERLINE FIX ******/
+
+.container.has-orphan {
+  position: relative;
+}
+.container.has-orphan::before {
+    content: "";
+    position: absolute;
+    background-color: #d6a929;
+  }
+
+/* Desktop: 3 columns */
+@media (min-width: 880px) {
+  .container.has-orphan::before {
+    left: 33em;
+    bottom: 15.25em;
+    height: 0.14em;
+    width: 16.5em;
+  }
+}
+
+/* Tablet: 600px–879px */
+@media (min-width: 600px) and (max-width: 879px) {
+  .container.has-orphan::before {
+    left: 22.175em;
+    bottom: 10.285em;
+    height: 0.095em;
+    width: 11.1em;
+  }
+}
+
+/* Mobile: 2 columns */
+@media (max-width: 599px) {
+  .show.mobile-underline-fix {
     position: relative;
   }
 
-  .container.has-orphan::after {
+  .show.mobile-underline-fix::after {
     content: "";
     position: absolute;
-    left: 32.875em;
-    bottom: 0;
-    width: 0.14em;
-    height: 15.375em;
+    bottom: -0.14em;
+    left: 0;
+    width: 100%;
+    height: 0.14em;
     background-color: #d6a929;
   }
-@media (min-width: 600px) and (max-width: 879px) {
-  .container.has-orphan::after {
-    left: 22.175em;
-    height: 10.378em;
-    width: .12em;
-  }
 }
+
+/* 8 shows */
+
+
+
+
   .day {
     font: 100 7em/0.9 var(--font-futura-light), var(--font-futura-book), var(--font-futura), "Futura Standard",
       "Trebuchet MS", sans-serif;

@@ -1,16 +1,16 @@
-export default {
+export default [{
   year: '2026',
-  month: 'July',
+  month: 'November',
   shows: [
     {
-      day: 3,
-      venue: 'Midnight Blue',
-      url: '//midnightbluegramercy.com',
-      band: 'Tom McEvoy Trio',
-      time: '7–8:30 PM'
+      day: 1,
+      venue: 'Church of the Ascension',
+      url: '//ascensionchurchnyc.org',
+      band: 'Jazz Vespers',
+      time: '6–7 PM'
     },
     {
-      day: 5,
+      day: 8,
       venue: 'Church of the Ascension',
       url: '//ascensionchurchnyc.org',
       band: 'Jazz Vespers',
@@ -18,59 +18,93 @@ export default {
     },
     {
       day: 9,
-      venue: 'Olly Olly Market',
-      url: '//ollyollymarket.com',
-      band: 'Sam Genson Quartet',
-      time: '5:00–7:30 PM'
-    },
-    {
-      day: 12,
-      venue: 'Church of the Ascension',
-      url: '//ascensionchurchnyc.org',
-      band: 'Jazz Vespers',
-      time: '6–7 PM'
-    },
-    {
-      day: 16,
-      venue: 'Olly Olly Market',
-      url: '//ollyollymarket.com',
-      band: 'Sam Genson Trio',
-      time: '5:00–7:30 PM'
-    },
-    {
-      day: 18,
-      venue: "Polly's",
-      url: '//pollysnyc.com',
-      band: 'Miss Bettie Rouge Quartet',
-      time: '6–9 PM'
-    },
-    {
-      day: 19,
-      venue: 'Church of the Ascension',
-      url: '//ascensionchurchnyc.org',
-      band: 'Jazz Vespers',
-      time: '6–7 PM'
-    },
-    {
-      day: 19,
       venue: 'Little Branch',
       url: '//little-branch.wherevi.com',
       band: 'Sam Genson Trio',
       time: '9:30 PM–12:00 AM'
     },
     {
-      day: 23,
-      venue: 'The Wallace',
-      url: '//thewallace.com/lounge',
-      band: 'Jesse Breheny Trio',
-      time: '7–10 PM'
+      day: 15,
+      venue: 'Church of the Ascension',
+      url: '//ascensionchurchnyc.org',
+      band: 'Jazz Vespers',
+      time: '6–7 PM'
+    },
+    
+    {
+      day: 19,
+      venue: 'One Flight Up',
+      url: '//oneflightupjazz.com',
+      band: 'Ben Cliness Trio',
+      time: '4–6 PM'
     },
     {
-      day: 26,
+      day: 22,
+      venue: 'Church of the Ascension',
+      url: '//ascensionchurchnyc.org',
+      band: 'Jazz Vespers',
+      time: '6–7 PM'
+    },
+    {
+      day: 25,
+      venue: "MadBar at NH Collection",
+      url: '//madbar-nyc.com',
+      band: 'Ben Cliness Trio',
+      time: '8–11 PM'
+    },
+    {
+      day: 29,
       venue: 'Church of the Ascension',
       url: '//ascensionchurchnyc.org',
       band: 'Jazz Vespers',
       time: '6–7 PM'
     }
   ]
-}
+}, {
+  year: 2026,
+  month: 'December',
+  shows: [
+    {
+      day: 4,
+      venue: 'One Flight Up',
+      url: '//oneflightupjazz.com',
+      band: 'Peter Hartmann Quartet',
+      time: '4–6 PM'
+    },
+    {
+      day: 6,
+      venue: 'Church of the Ascension',
+      url: '//ascensionchurchnyc.org',
+      band: 'Jazz Vespers',
+      time: '6–7 PM'
+    },
+    {
+      day: 13,
+      venue: 'Church of the Ascension',
+      url: '//ascensionchurchnyc.org',
+      band: 'Jazz Vespers',
+      time: '6–7 PM'
+    },
+    {
+      day: 20,
+      venue: 'Church of the Ascension',
+      url: '//ascensionchurchnyc.org',
+      band: 'Jazz Vespers',
+      time: '6–7 PM'
+    },
+    {
+      day: 20,
+      venue: 'Berlin',
+      url: '//berlin.nyc',
+      band: 'John William Watkins band',
+      time: '9–11 PM'
+    },
+    {
+      day: 27,
+      venue: 'Church of the Ascension',
+      url: '//ascensionchurchnyc.org',
+      band: 'Jazz Vespers',
+      time: '6–7 PM'
+    }
+  ]
+}]
