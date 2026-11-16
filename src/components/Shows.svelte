@@ -144,7 +144,7 @@
   .container.has-orphan::before {
     left: 33em;
     bottom: 15.25em;
-    height: 0.14em;
+    height: 0.1275em;
     width: 16.5em;
   }
 }
@@ -160,11 +160,8 @@
 }
 
 /* Mobile: 2 columns */
+/* idt this actually works. might have to work on this later if i have an odd # of shows in a month */
 @media (max-width: 599px) {
-  .show.mobile-underline-fix {
-    position: relative;
-  }
-
   .show.mobile-underline-fix::after {
     content: "";
     position: absolute;
@@ -175,8 +172,6 @@
     background-color: #d6a929;
   }
 }
-
-/* 8 shows */
 
 
 
